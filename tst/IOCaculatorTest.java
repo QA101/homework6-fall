@@ -1,8 +1,6 @@
 package tst;
 import static org.junit.Assert.*;
-
 import org.junit.*;
-
 import src.IOCalculator;
 
 public class IOCaculatorTest {
@@ -22,7 +20,6 @@ public class IOCaculatorTest {
 		expected = 6;
 		actual = io.Calculate(2, 4, "+");
 		assertTrue("Expected: " + expected + " Actual: "+actual, actual == expected);
-		
 		
 		expected = -2;
 		actual = io.Calculate(2, 4, "-");
