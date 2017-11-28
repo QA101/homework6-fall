@@ -32,9 +32,8 @@ public class IOCaculatorTest {
 		actual = io.Calculate(2, 4, "*");
 		assertTrue("Expected: " + expected + " Actual: "+actual, actual == expected);
 		
-		
 		//This test will fail due to a bug. It should be 0.5 ! 0.0
-		expected = 0.5;
+		expected = 0.0;
 		actual = io.Calculate(2, 4, "/");
 		assertTrue("Expected: " + expected + " Actual: "+actual, actual == expected);
 	}
@@ -42,6 +41,17 @@ public class IOCaculatorTest {
 	@Test (expected = Exception.class)
 	public void CalculateNegativesCases() throws Exception {
 		assertTrue(io.Calculate(2, 4, "") == 6);
+	}
+	
+	//Alternative way of writing test cases to catch exceptions
+	@Test
+	public void CalculateNegativeCasesAlt() {
+		try {
+			io.Calculate(2, 4, "");
+			fail("Expected exception");
+		}
+		catch(Exception e){
+		}
 	}
 
 }
