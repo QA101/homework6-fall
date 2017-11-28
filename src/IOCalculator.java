@@ -112,7 +112,7 @@ public class IOCalculator {
 				return first + second;
 			case "/":
 				/*
-				 * There is a bug here!!!! Lose of data caused by using ints.
+				 * There is a bug here!!!! Loss of data caused by using ints.
 				 * Found the bug by doing unit testing 
 				 */
 				return first / second;
